@@ -1,12 +1,12 @@
-const cucumber = require("cypress-cucumber-preprocessor").default;
-const browserify = require("@cypress/browserify-preprocessor");
+const browserify = require('@cypress/browserify-preprocessor');
+const cucumber = require('cypress-cucumber-preprocessor').default;
+const resolve = require('resolve');
 
-module.exports = (on) => {
-  const options = browserify.defaultOptions;
+module.exports = (on, config) => {
+  const options = {
+    ...browserify.defaultOptions,
+    typescript: resolve.sync('typescript', { baseDir: config.projectRoot }),
+  };
 
-  options.browserifyOptions.plugin.unshift(['tsify']);
-  // Or, if you need a custom tsconfig.json for your test files:
-  // options.browserifyOptions.plugin.unshift(['tsify', {project: 'path/to/other/tsconfig.json'}]);
-
-  on("file:preprocessor", cucumber(options));
+  on('file:preprocessor', cucumber(options));
 };
