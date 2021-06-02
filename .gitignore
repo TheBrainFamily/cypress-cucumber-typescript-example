@@ -1,3 +1,6 @@
 node_modules
 .idea
 cypress/videos
+.env
+cypress
+results

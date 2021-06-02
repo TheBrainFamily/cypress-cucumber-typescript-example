@@ -1,3 +1,16 @@
 {
+  "baseUrl": "http://localhost",
+  "reporter": "cypress-multi-reporters",
+  "pluginsFile": "config/plugins/index.js",
+  "supportFile": "config/support/index.js",
+  "screeshotsFolder": "screenshots",
+  "waitForAnimations": false,
+  "chromeWebSecurity": false,
+  "fixturesFolder": "mocks",
+  "integrationFolder": "features",
+  "video": false,
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+  },
   "ignoreTestFiles": "*.ts"
 }
