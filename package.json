@@ -9,10 +9,9 @@
   "author": "Lukasz Gandecki",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^3.3.0",
-    "cypress-cucumber-preprocessor": "^1.11.0",
-    "tsify": "^4.0.1",
-    "typescript": "^3.4.5"
+    "cypress": "^8.7.0",
+    "cypress-cucumber-preprocessor": "^4.3.0",
+    "typescript": "^4.4.4"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
